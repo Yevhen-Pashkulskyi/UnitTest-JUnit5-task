@@ -1,5 +1,7 @@
 package org.example.app.data;
 
+import org.example.app.utils.AppValidator;
+
 import java.util.Scanner;
 
 public class DataProvider {

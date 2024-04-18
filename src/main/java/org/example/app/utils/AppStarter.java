@@ -5,18 +5,19 @@ import org.example.app.exception.TemperatureException;
 
 public class AppStarter {
 
-    public void appStarter(){
+    public String appStarter(){
 
-        DataProvider dataProvider = new DataProvider();
-        AppValidator appValidator = new AppValidator();
+        DataProvider provider = new DataProvider();
+        AppValidator validator = new AppValidator();
 
         try {
-            appValidator.validateTemperature(dataProvider.getTemperature());
+           return validator.validateTemperature(provider.getTemperature());
         } catch (TemperatureException e) {
-            throw new RuntimeException(e.getMessage());
+            return e.getMessage();
         }
 
     }
+
     public void getOutput(String output){
         System.out.println(output);
     }
