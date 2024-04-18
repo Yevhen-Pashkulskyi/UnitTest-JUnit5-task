@@ -4,12 +4,12 @@ import org.example.app.utils.AppStarter;
 
 public class App {
     public static void main(String[] args) {
-        AppStarter appStarter= new AppStarter();
+        AppStarter appStart= new AppStarter();
         try {
-            appStarter.appStarter();
-            appStarter.getOutput("Temperature is OK.");
+            appStart.appStarter();
+            appStart.getOutput("Temperature is OK.");
         } catch (RuntimeException e) {
-            appStarter.getOutput(e.getMessage());
+            appStart.getOutput(e.getMessage());
         }
     }
 }

@@ -62,8 +62,9 @@ class AppValidatorTest {
     @DisplayName("Test, invalid temperature.")
     void test_Invalid_Temperature() {
         int temperatureTest = 100;
+        String temperatureError = "Invalid temperature";
         assertThrows(TemperatureException.class, () ->
-                appValidator.validateTemperature(temperatureTest));
+                appValidator.validateTemperature(temperatureTest),temperatureError);
     }
 
     @AfterEach
