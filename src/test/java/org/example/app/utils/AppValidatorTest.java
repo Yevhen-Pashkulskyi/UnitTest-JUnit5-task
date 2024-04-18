@@ -1,11 +1,13 @@
 package org.example.app.utils;
 
-import org.example.app.App;
+
 import org.example.app.exception.TemperatureException;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestMethodOrder(OrderAnnotation.class)
 class AppValidatorTest {
 
     AppValidator appValidator;
@@ -64,7 +66,7 @@ class AppValidatorTest {
         int temperatureTest = 100;
         String temperatureError = "Invalid temperature";
         assertThrows(TemperatureException.class, () ->
-                appValidator.validateTemperature(temperatureTest),temperatureError);
+                appValidator.validateTemperature(temperatureTest), temperatureError);
     }
 
     @AfterEach
