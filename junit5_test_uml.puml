@@ -1,0 +1,27 @@
+@startuml
+class org.example.app.utils.AppStarter {
++ String appStarter()
++ void getOutput(String)
+}
+
+class org.example.app.utils.AppValidator {
+- {static} int MIN_TEMPERATURE
+- {static} int MAX_TEMPERATURE
++ String validateTemperature(int)
+}
+
+
+class org.example.app.data.DataProvider {
++ int getTemperature()
+}
+
+class org.example.app.exception.TemperatureException {
+}
+class org.example.app.App {
++ {static} void main(String[])
+}
+
+
+
+org.example.app.exception.RuntimeException <|-- org.example.app.exception.TemperatureException
+@enduml
