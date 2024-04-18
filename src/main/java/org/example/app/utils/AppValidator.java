@@ -11,6 +11,5 @@ public class AppValidator {
         if (temperature < MIN_TEMPERATURE || temperature > MAX_TEMPERATURE) {
             throw new TemperatureException("Invalid temperature.");
         }
-
     }
 }
